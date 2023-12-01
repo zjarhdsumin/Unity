@@ -16,7 +16,7 @@
 - ![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white)
 - ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ### Record
-- ![Notion](https://open-pizza-3d8.notion.site/Unity-ec12976aac374c86b6c1582500615525?pvs=4)
+- ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
 ### 🛠 스크립트 소개
 - PlayerManager.cs : 플레이어 이동 관리
