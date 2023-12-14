@@ -1,8 +1,16 @@
 # Unity
+![title](https://github.com/zjarhdsumin/Unity/assets/88326586/8d8438b2-f448-475d-9c37-10243a48b2a7)
 ## Unity로 2D 게임 만들기
 
 ## 🔍 화면 예시
-(수정 예정)
+### 타이틀 화면
+<img width="819" alt="스크린샷 2023-12-14 오후 4 40 14" src="https://github.com/zjarhdsumin/Unity/assets/88326586/31a823d4-972e-4b0d-b913-c9015eacbd4b">
+### 게임 시작 시 화면
+<img width="820" alt="스크린샷 2023-12-14 오후 4 42 25" src="https://github.com/zjarhdsumin/Unity/assets/88326586/2acebca8-cc1a-43fc-88b7-83ba8bfee2e3">
+<img width="823" alt="스크린샷 2023-12-14 오후 4 43 46" src="https://github.com/zjarhdsumin/Unity/assets/88326586/4940212b-ff2b-42bc-bfe9-36265d3a0058">
+<img width="820" alt="스크린샷 2023-12-14 오후 4 43 11" src="https://github.com/zjarhdsumin/Unity/assets/88326586/63d4894a-1007-499b-ba3d-50d6b20f02cb">
+
+
 
 ## 🙋‍♂️ 참여 인원
 - 개발 1인
@@ -33,11 +41,24 @@
     - dowBGM.cs
     - fadeinfadeoutTest.cs : BGMManager.cs 예시
 - OrderManager.cs : 플레이어 or NPC 등 움직임 관리
-    - BodyEvent.cs
     - TestOrder.cs : OrderManager 예시
 - DialogueManager.cs : 대화창 관리
     - Dialogue.cs
     - NoticeDialogue.cs
     - Question.cs
+    - BodyEvent.cs
+    - StarEvent.cs
+    - StarEnd.cs : 엔딩 스크롤
+    - PengEvent.cs
+    - PengQuizEvent.cs
+    - KeyCardEvent.cs
 - FadeManager.cs : 씬이나 맵 이동 시 FadeOut / FadeIn 관리
 - audioManager.cs : 플레이어 걸음 소리, 텍스트 출력 소리 등 사운드 관리
+- WeatherManager.cs : 비 or 눈 등 날씨 관리
+      - testRain.cs : 날씨 사용 예시
+- ButtonManager.cs : 버튼 관리
+- DatabaseManager.cs : 배열 및 변수를 사용해 데이터 저장
+- GameManager.cs
+- InputFiled.cs : 키 입력
+
+
