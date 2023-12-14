@@ -23,7 +23,7 @@ public class TransferSamePoint : MonoBehaviour
             // 플레이어의 위치를 목표 위치로 설정
             thePlayer.transform.position = target.position;
             // 카메라의 위치를 목표 위치로 설정 (만약 카메라도 이동해야 한다면)
-            theCamera.transform.position = new Vector3(target.position.x, target.position.y, theCamera.transform.position.z);
+            theCamera.transform.position = new Vector3(target.position.x, target.position.y, -10f);
         }
     }
 }

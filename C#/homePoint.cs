@@ -16,7 +16,7 @@ public class homePoint : MonoBehaviour
         theCamera = FindObjectOfType<cameraManager>();
         if(startPoint == thePlayer.currentMapName && thePoint == thePlayer.targetStartPoint) {
             if(startPoint == "MacMaze" || startPoint == "PengHome"){
-                theCamera.SetOrthographicSize(6);
+                theCamera.SetOrthographicSize(6f);
             }
             else{
                 theCamera.SetOrthographicSize(5.3f);

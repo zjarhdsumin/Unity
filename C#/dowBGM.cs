@@ -10,6 +10,8 @@ public class Test : MonoBehaviour
     private BGMManager bgm;
     public int playMusicTrack;
     private PlayerManager thePlayer;
+    private DatabaseManager theDB;
+
     // Start is called before the first frame update
     private void Awake() //스크립트 실행 시 Start보다 먼저 실행됨
     {
@@ -25,6 +27,7 @@ public class Test : MonoBehaviour
     {
         thePlayer = FindObjectOfType<PlayerManager>();
         bgm = FindObjectOfType<BGMManager>();
+        theDB = FindObjectOfType<DatabaseManager>();
 
         if(thePlayer.currentMapName == "SampleScene"){
             bgm.SetVolume(0f);

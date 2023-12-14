@@ -1,45 +1,48 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class BodyEvent : MonoBehaviour
+public class PnegQuizEvent : MonoBehaviour
 {
     public Dialogue dialogue1;
-    public Dialogue dialogue2; //대화가 두 번 진행되기 때문
-    private DialogueManager theDM; //다이얼로그 실행
+    public Dialogue dialogue2;
+    public Dialogue dialogue3;
+    private DialogueManager theDM;
     private PlayerManager thePlayer;
-    private DatabaseManager theDB;
+    private InputField theInput;
     private bool flag = false;
     private static bool first = false;
     private void Awake()
     {
-        if(first){
+        if (first)
+        {
             Destroy(this.gameObject);
         }
+        // theInput = FindObjectOfType<InputField>();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         theDM = FindObjectOfType<DialogueManager>();
         thePlayer = FindObjectOfType<PlayerManager>();
-        theDB = FindObjectOfType<DatabaseManager>();
+        theInput = FindObjectOfType<InputField>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (!flag && Input.GetKey(KeyCode.Space) && thePlayer.animator.GetFloat("DirY") == 1)
+        if (!flag && other.transform.tag == "Player")
         {
+            Debug.Log("durldkjfslkdjf");
             flag = true;
-            if (thePlayer.key)
+            theDM.ShowDialogue(dialogue1);
+            int result = theInput.check();
+            if (result == 1)
             {
-                first = true;
-                theDB.peng = true;
-                StartCoroutine(DestroyBodyGurd());
+                DestroyBodyGurd();
             }
             else
             {
-                theDM.ShowDialogue(dialogue1);
+                theDM.ShowDialogue(dialogue3);
             }
         }
     }

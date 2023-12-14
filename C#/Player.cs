@@ -72,8 +72,8 @@ public class Player : MonoBehaviour
     protected bool CheckCollsion()
     {
         RaycastHit2D hit;
-        Vector2 start = transform.position; //캐릭터의 현재 위치 값
-        Vector2 end = start + new Vector2(vector.x * speed * walkCount, vector.y * speed * walkCount); //캐릭터가 이동하고자 하는 위치값
+        Vector2 start = new Vector2(transform.position.x + vector.x * speed * walkCount, transform.position.y + vector.y * speed * walkCount);
+        Vector2 end = start + new Vector2(vector.x * speed, vector.y * speed); //캐릭터가 이동하고자 하는 위치값
 
         boxCollider.enabled = false;
         hit = Physics2D.Linecast(start, end, layerMask);

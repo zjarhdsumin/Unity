@@ -25,10 +25,12 @@ public class cameraManager : MonoBehaviour
 
     private void Awake() //스크립트 실행 시 Start보다 먼저 실행됨
     {
-        if(instance != null){
+        if (instance != null)
+        {
             Destroy(this.gameObject);
         }
-        else{
+        else
+        {
             DontDestroyOnLoad(this.gameObject); //해당 게임 오브젝트는 다른 씬을 로드할 때마다 파괴하지 말라는 의미
             instance = this;
         }
@@ -47,7 +49,8 @@ public class cameraManager : MonoBehaviour
     //카메라는 매 프레임마다 호출이 이루어지기 때문에 update() 내에 작성
     void Update()
     {
-        if(target.gameObject != null){
+        if (target.gameObject != null)
+        {
             targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
             //this : 해당 스크립트가 적용될 객체. 따라서 카메라를 가리킴 (생략 가능)
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
@@ -55,20 +58,22 @@ public class cameraManager : MonoBehaviour
             //deltaTime : 1초에 실행되는 프레임의 역수로 1초에 60 프레임이 실행된다면 60분의 1 값을 가짐. 즉, 1초 동안 moveSpeed만큼 이동시키겠다는 의미
 
             //Clamp() : (판단하고자 하는 값, 최소값, 최대값) -> 만약 판단하고자 하는 값이 최소값보다 작으면 최소값으로, 최소값과 최대값 사이에 있으면 판단하고자 하는 값으로, 최대값보다 크면 최대값으로 설정됨
-            float clampedX = Mathf.Clamp(this.transform.position.x, minBound.x + halfWidth, maxBound.x - halfWidth ); //범위 안에 가둬두는 함수 : Clamp()
+            float clampedX = Mathf.Clamp(this.transform.position.x, minBound.x + halfWidth, maxBound.x - halfWidth); //범위 안에 가둬두는 함수 : Clamp()
             float clampedY = Mathf.Clamp(this.transform.position.y, minBound.y + halfHeight, maxBound.y - halfHeight);
 
             this.transform.position = new Vector3(clampedX, clampedY, this.transform.position.z); //this 생략 가능
         }
     }
 
-    public void SetBound(BoxCollider2D newBound){
+    public void SetBound(BoxCollider2D newBound)
+    {
         bound = newBound;
         minBound = bound.bounds.min;
         maxBound = bound.bounds.max;
     }
 
-    public void SetOrthographicSize(float newSize){
+    public void SetOrthographicSize(float newSize)
+    {
         theCamera.orthographicSize = newSize;
     }
 }

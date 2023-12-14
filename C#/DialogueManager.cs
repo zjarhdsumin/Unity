@@ -53,16 +53,38 @@ public class DialogueManager : MonoBehaviour
         talking = false;
         theOrder.YesMove();
         NoticeDialogue[] nds = FindObjectsOfType<NoticeDialogue>();
-        foreach(var nd in nds){
+        foreach (var nd in nds)
+        {
             nd.ResetFlag();
         }
         BodyEvent[] bes = FindObjectsOfType<BodyEvent>();
-        foreach(var be in bes){
+        foreach (var be in bes)
+        {
             be.ResetFlag();
         }
         Question[] qs = FindObjectsOfType<Question>();
-        foreach(var q in qs){
+        foreach (var q in qs)
+        {
             q.ResetFlag();
+        }
+        NPCEvent[] ns = FindObjectsOfType<NPCEvent>();
+        foreach (var n in ns)
+        {
+            n.ResetFlag();
+        }
+        KeyCardEvent[] ks = FindObjectsOfType<KeyCardEvent>();
+        foreach (var k in ks)
+        {
+            k.ResetFlag();
+        }
+        PnegQuizEvent[] pqs = FindObjectsOfType<PnegQuizEvent>();
+        foreach (var pq in pqs)
+        {
+            pq.ResetFlag();
+        }
+        StarEnd[] se = FindObjectsOfType<StarEnd>();
+        foreach(var s in se){
+            s.ResetFlag();
         }
     }
 
