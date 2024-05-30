@@ -1,11 +1,15 @@
 # Unity
 ![title](https://github.com/zjarhdsumin/Unity/assets/88326586/8d8438b2-f448-475d-9c37-10243a48b2a7)
+
 ## Unity로 2D 게임 만들기
 
 ## 🔍 화면 예시
 ### 타이틀 화면
+
 <img width="819" alt="스크린샷 2023-12-14 오후 4 40 14" src="https://github.com/zjarhdsumin/Unity/assets/88326586/31a823d4-972e-4b0d-b913-c9015eacbd4b">
+
 ### 게임 시작 시 화면
+
 <img width="820" alt="스크린샷 2023-12-14 오후 4 42 25" src="https://github.com/zjarhdsumin/Unity/assets/88326586/2acebca8-cc1a-43fc-88b7-83ba8bfee2e3">
 <img width="823" alt="스크린샷 2023-12-14 오후 4 43 46" src="https://github.com/zjarhdsumin/Unity/assets/88326586/4940212b-ff2b-42bc-bfe9-36265d3a0058">
 <img width="820" alt="스크린샷 2023-12-14 오후 4 43 11" src="https://github.com/zjarhdsumin/Unity/assets/88326586/63d4894a-1007-499b-ba3d-50d6b20f02cb">
@@ -17,16 +21,24 @@
 - 캐릭터 디자인 및 아이템 디자인 1인
 
 ## :books: Teck Stack
+
 ### :pencil2: Languages
+
 - ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+- 
 ### 🧰 Tools
+
 - ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 - ![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white)
 - ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+- 
 ### 🖇 Record
+
 - ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
+
 ### 🛠 스크립트 소개
+
 - PlayerManager.cs : 플레이어 이동 관리
     - Player.cs : PlayerManager.cs 부모 클래스. 중복 변수/함수 정의
 - cameraManager.cs : 메인 카메라 관리
